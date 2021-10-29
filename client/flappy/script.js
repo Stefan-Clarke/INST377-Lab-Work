@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         bird.style.left = birdLeft + 'px'
     }
     let gameTimerId = setInterval(startGame, 20)
-    if (!isGameOver) setTimeout(generateObstacle, 3000)
+    
 
     function control(x) {
         if (x.keyCode == 32) {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         let timerId = setInterval(moveObstacle, 20)
-        setTimeout(generateObstacle, 3000)
+        if (!isGameOver) setTimeout(generateObstacle, 3000)
     }
     generateObstacle()
 
